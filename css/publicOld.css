@@ -1,0 +1,166 @@
+@charset "utf-8";
+html{color:#333; background-color:#F1F1F1;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td{margin:0;padding:0;}
+body{ font-size:14px;font-family:Arial; background-color:#F1F1F1; }
+body.bg{ background-color:#FFF; }
+table{border-collapse:collapse;border-spacing:0;}
+fieldset, img{border:0;display:block;}
+input, textarea, select{ font-size:14px; font-family:Arial; -webkit-appearance:none; }
+input:focus, textarea:focus, select:focus{ outline:none; }
+ul{list-style-type:none;}
+li{list-style:none;}
+h1, h2, h3, h4, h5, h6{font-size:100%;font-weight:normal;}
+a,a:link{color:#333; text-decoration:none;}
+a:hover,a:active{color:#333;text-decoration:none;}
+.clea{ clear:both; }
+.fl{ float:left; }
+/*
+word-break:break-all;word-wrap:break-word;
+border-radius:7px;-webkit-border-radius:7px;-moz-border-radius:7px;
+background:rgba(255,0,0,0.9);
+transition:all 0.2s;-webkit-transition:all 0.2s;-moz-transition:all 0.2s;
+*/
+
+/*img size*/
+.bannerp img{width:100%;}
+
+/*public*/
+.main{ clear:both; width:100%; min-width:320px; max-width:750px; margin:0 auto; }
+.mainmlr{ margin:0 2.5%; }
+
+.mbanner{ clear:both; position:relative; }
+.mbanner img{ width:100%; }
+
+/*index.html*/
+.itopd{ clear:both; padding:30px 0; background-color:#6699ff; text-align:center; }
+.itopd .headd{ clear:both; width:70px; height:70px; padding:5px; margin:0 auto; background-color:#fff; border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%; }
+.itopd .headd img{ width:70px; height:70px; border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%; overflow:hidden; }
+.itopd h3{ clear:both; padding-top:5px; font-size:18px; color:#fff; }
+
+.inavd{ clear:both; margin-bottom:12px; background-color:#fff; }
+.inavd ul{ clear:both; background-color:#fff; overflow:hidden; zoom:1; }
+.inavd li{ float:left; width:33.33%; padding:25px 0; line-height:24px; font-size:14px; border-top:1px #ddd solid; text-align:center; }
+.inavd li a{ height:100%; display:block; cursor:pointer; color:#5d5d5d; border-right:1px #EEE solid; }
+.inavd li.last a{ border-right:0; }
+.inavd li img{ width:40%; display:inline; }
+
+
+/*parking.html*/
+.topd{ position:fixed; top:0; left:0; right:0; max-width:750px; margin:0 auto; padding:6px 0; width:100%; height:34px; line-height:34px; z-index:9999; background-color:#5485FF; color:#fff; }
+.topd .cond{ width:95%; padding:0 2.5%; font-size:15px; position:relative; }
+.topd .cond h3{ padding:0 70px; font-size:17px; color:#fff; text-align:center; }
+.topd .cond .homea{ position:absolute; top:0; left:2.5%; }
+.topd .cond .homea a{ padding-left:20px; background:url(../images/ico1.png) center left no-repeat; background-size:auto 16px; color:#fff; display:inline-block; }
+.topd .cond .backa{ position:absolute; top:0; left:2.5%; }
+.topd .cond .backa a{ padding-left:16px; background:url(../images/back.png) center left no-repeat; background-size:auto 16px; color:#fff; display:inline-block; }
+.topd .cond .trd{ position:absolute; top:0; right:1.5%; }
+.topd .cond .trd p{ float:left; }
+.topd .cond .trd p.searcha{ padding-right:5px; }
+.topd .cond .trd p.searcha a{ width:34px; height:34px; background:url(../images/search1.png) center no-repeat; background-size:auto 22px; display:inline-block; }
+.topd .cond .trd p.searcha.bg2 a{ background:url(../images/search3.png) center no-repeat; background-size:auto 26px; }
+.topd .cond .trd p.maplistd a{ width:34px; height:34px; display:inline-block; }
+.topd .cond .trd p.maplistd.mapa a{ background:url(../images/ico2_1.png) center no-repeat; background-size:auto 20px; }
+.topd .cond .trd p.maplistd.lista a{ background:url(../images/ico2_2.png) center no-repeat; background-size:auto 20px; }
+.topdmtd{ clear:both; height:46px; overflow:hidden; }
+
+.tsearchd{ position:fixed; top:46px; left:0; right:0; max-width:750px; margin:0 auto; padding:6px 0; width:100%; height:34px; z-index:9999; border-top:1px #8EABFF solid; background-color:#5485FF; display:none; }
+.tsearchd .formd{ width:95%; padding:0 2.5%; position:relative; }
+.tsearchd .formd .inpd{ padding-right:75px; }
+.tsearchd .formd .inpd .txt{ width:94%; padding:7px 3%; height:20px; line-height:20px; border:0; border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px; background-color:#F3F3F3; }
+.tsearchd .btnd{ position:absolute; right:2.5%; top:0; width:70px; } 
+.tsearchd .btnd a{ width:100%; height:34px; line-height:34px; text-align:center; background-color:#F3F3F3; color:#333; border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px; display:block; }
+.tsearchd .btnd a i{ padding-left:22px; font-style:normal; background:url(../images/search2.png) center left no-repeat; background-size:auto 20px; display:inline-block; }
+.tsearchdmtd{ clear:both; height:47px; overflow:hidden; display:none; }
+
+/*
+旧样式
+.parkuld{ clear:both; line-height:20px; padding-bottom:20px; }
+.parklid{ clear:both; padding:10px 0; border-bottom:1px #ddd solid; position:relative; }
+.parklid .infod{ padding-right:60px; }
+.parklid .infod h3{ font-size:17px; line-height:26px; }
+.parklid .infod p.addr{ clear:both; color:#999; padding:6px 0; }
+.parklid .infod p.plot{ clear:both; color:#428bca; }
+.parklid .navid{ position:absolute; right:0; top:50%; margin-top:-25px; }
+.parklid .navid a{ width:54px; padding-top:34px; line-height:20px; text-align:center; background:url(../images/navi.png) top center no-repeat; background-size:32px auto; color:#777; display:block; }
+*/
+
+/*车场列表*/
+.parkuld{ clear:both; line-height:20px; padding-bottom:20px; display:none; }
+.parkuld .nod{ clear:both; padding:30px 0; text-align:center; }
+.parklid{ clear:both; padding:10px 2.5%; margin-top:10px; overflow:hidden; zoom:1; background-color:#fff; border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px; }
+
+.parklid .pnamed{ clear:both; position:relative; line-height:26px; }
+.parklid .pnamed h3{ font-size:17px; padding-right:100px; }
+.parklid .pnamed p{ position:absolute; right:0; top:0; color:#5485FF; font-size:12px; }
+
+.parklid .cond{ clear:both; padding-top:3px; position:relative; }
+.parklid .infod{ clear:both; padding-right:80px; color:#999; }
+.parklid .infod p.addr{ clear:both; padding:6px 0; }
+.parklid .infod p.plot{ clear:both; }
+.parklid .infod p.plot span{ color:#5485FF; padding-right:2px; }
+
+.parklid .navid{ position:absolute; right:0; top:50%; margin-top:-20px; }
+.parklid .navid a{ width:40px; height:40px; line-height:20px; text-align:center; background:url(../images/navi2.png) top center no-repeat; background-size:40px auto; color:#777; display:block; }
+
+/*车场地图*/
+.parkmapd{ clear:both; position:relative; }
+.parkmapd .mapmd{ clear:both; width:100%; height:100%; }
+.parkmapd .pmapcd{ position:absolute; left:0; bottom:0; width:100%; border-top:1px #ddd solid; z-index:9999999999; background-color:#fff; display:none; }
+.parkmapd .pmapcd .pclosed{ clear:both; text-align:center; }
+.parkmapd .pmapcd .pclosed a{ width:100%; height:24px; background:url(../images/ico3.png) center no-repeat; background-size:auto 10px; display:inline-block; }
+.parkmapd .pmapcd .parklid{ clear:both; padding-top:0; padding-bottom:10px; margin-top:0; border-radius:0;-webkit-border-radius:0;-moz-border-radius:0; }
+.parkmapd .pmapcd .parklid .cond{ padding-top:0; }
+
+/*carlist.shtml*/
+.caruld{ clear:both; padding:5px 0; }
+.carlid{ clear:both; padding:10px 2.5%; line-height:30px; margin-top:12px; position:relative; background-color:#fff; border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px; }
+.carlid h3{ font-size:20px; color:#666; }
+.carlid p{ position:absolute; top:0; right:0; text-align:center; }
+.carlid p a{ width:66px; height:50px; line-height:50px; font-size:16px; background-color:#e51c23; color:#fff; display:inline-block; border-radius:0 5px 5px 0;-webkit-border-radius:0 5px 5px 0;-moz-border-radius:0 5px 5px 0; }
+
+.caradd{ clear:both; padding:10px 2.5%; line-height:30px; margin-top:12px; position:relative; background-color:#fff; text-align:center; border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px; }
+.caradd a{ clear:both; width:70%; height:34px; line-height:34px; font-size:16px; border:1px #5485FF dashed; color:#5485FF; border-radius:34px;-webkit-border-radius:34px;-moz-border-radius:34px; display:inline-block; }
+.caradd a i{ padding-left:25px; font-style:normal; background:url(../images/ico5.png) center left no-repeat; background-size:auto 16px; display:inline-block; }
+
+/*carbind.shtml*/
+.parkd2{ clear:both; padding:20px 0; }
+.parkd2 .titd{ clear:both; font-size:16px; padding-bottom:10px; overflow:hidden; zoom:1; }
+
+/*车牌号输入框*/
+.plateipd{ clear:both; }
+.plateipd ul{ clear:both; overflow:hidden; zoom:1; }
+.plateipd li{ float:left; width:11.5%; padding:4px 0.5%; height:44px; line-height:44px; text-align:center; }
+.plateipd li a{ border:0; width:100%; height:44px; font-size:22px; border:1px #D2D1D7 solid; display:inline-block; color:#000; background-color:#fff; }
+.plateipd li a.on{ border:1px #5485FF solid; }
+
+.plateipd li.newe a{ border:1px #D2D1D7 dashed; font-size:10px; height:32px; line-height:16px; padding:6px 0; color:#666; }
+.plateipd li.newe a i{ font-style:normal; font-size:14px; }
+
+/*车牌号选项键盘*/
+.platekeyd{ position:fixed; bottom:0; left:0; right:0; width:100%; max-width:750px; margin:0 auto; background-color:#CBCED7; display:none; }
+.platekeyd .linkd{ clear:both; height:36px; background-color:#FFF; border-top:1px #ddd solid; text-align:center; font-size:16px; }
+.platekeyd .linkd a{ float:right; width:60px; height:36px; line-height:36px; display:block; color:#4785C2; }
+
+.platekeyd .keyd{ font-size:20px; padding:3px 0; overflow:hidden; zoom:1; }
+.platekeyd .keyd li{ float:left; width:9%; padding:2px 0.5%; height:44px; line-height:44px; text-align:center; }
+.platekeyd .keyd li a{ border:0; width:100%; display:inline-block; color:#000; background-color:#fff; -webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px; }
+.platekeyd .keyd .lock li a{ background-color:#DCDFE4; color:#999; }
+.platekeyd .keyd ul.mini li{ width:7%; }
+
+.platekeyd .deld{ position:absolute; right:2px; bottom:5px; }
+.platekeyd .deld a{ width:54px; height:44px; background:url(../images/del.png) center no-repeat; background-size:auto 24px; display:block; background-color:#EEE; -webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px; }
+
+.cbbtnd{ clear:both; text-align:center; }
+.cbbtnd a{ clear:both; width:100%; height:44px; line-height:44px; font-size:16px; background-color:#5485FF; color:#fff; border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px; display:inline-block; }
+
+/*parkrecord.shtml*/
+.parkruld{ clear:both; font-size:16px; padding-bottom:20px; }
+.parkruld .nod{ clear:both; padding:30px 0; text-align:center; }
+.parkrlid{ clear:both; padding:10px 3%; margin-top:10px; overflow:hidden; zoom:1; background-color:#fff; border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px; }
+.parkrlid .titd{ clear:both; position:relative; line-height:26px; }
+.parkrlid .titd h3{ font-size:17px; padding-right:100px; }
+.parkrlid .titd h4{ position:absolute; right:0; top:0; line-height:22px; color:#5485FF; }
+.parkrlid .titd p{ clear:both; margin-top:8px; padding-left:26px; background:url(../images/ico6.png) left center no-repeat; background-size:auto 22px; font-size:14px; color:#999; }
+
+.parkrlid .infod{ clear:both; margin-top:10px; padding-top:10px; color:#666; border-top:1px #ddd solid; }
+.parkrlid .infod p{ clear:both; padding:4px 0;}

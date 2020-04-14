@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>我的停车信息</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<style type="text/css">
+.carinfotopd{height: 40px;}
+.carinfotopd .infotit{align-items: flex-start;padding-left: 2.5%;}
+.invbtnd{padding-top: 30px;}
+
+</style>
+</head>
+<body ontouchstart="">
+<!--wrap-->
+<div class="wrap">
+	<!--carinfotopd-->
+	<div class="carinfotopd">
+		<div class=" flexcenter infotit ">
+			请确认您的停车信息无误，再进行支付。
+		</div>
+	</div>
+	<!--./carinfotopd-->
+	<div class="blank50"></div>
+	<!--sumd-->
+	<div class="sumd flexcenter">
+		<p class="p1">实付金额：</p>
+		<p class="p2">421.00 <span>元</span></p>
+		<p class="p3 ">(已超时，出场补缴)</p>
+	</div>
+	<!--./sumd-->
+	<!--cmcond-->
+	<div class="cmcond mainpad">
+		<!--cmtit-->
+		<div class="cmtit">
+			<div class="conleft">停车场信息：</div>
+			<div class="conright">
+				<p class="p1">水湾1979商业停车场</p>
+				<p class="p2">广东省深圳市南山区水湾1979生态科技园区9栋B座4楼</p>
+			</div>
+		</div>
+		<!--./cmtit-->
+		<!--conlist-->
+		<ul class="conlist">
+			<li class="height">
+				<div class="conleft">车牌号：</div>
+				<div class="conright">
+					<button type="button" class="btnimg"><i class="imgicon"></i>查看照片</button><span class="spantxt">粤BY7835</span>
+				</div>
+			</li>
+			<li class="height">
+				<div class="conleft">入场时间：</div>
+				<div class="conright">2019-04-17 11:59:59</div>
+			</li>
+			<li class="height">
+				<div class="conleft">计费时间：</div>
+				<div class="conright">2019-04-17 11:59:59</div>
+			</li>
+			<li class="height">
+				<div class="conleft">停车时长：</div>
+				<div class="conright">19天4小时56分59秒</div>
+			</li>
+		</ul>
+		<!--./conlist-->
+		<!--border-->
+		<ul class="conlist border trans">
+			<li class="height">
+				<div class="conleft">已缴金额：</div>
+				<div class="conright">0.01元</div>
+			</li>
+			<li class="height">
+				<div class="conleft">支付时间：</div>
+				<div class="conright">2019-04-17 11:59:59</div>
+			</li>
+			<li class="listlast">
+				<div class="conleft">可最晚出场：</div>
+				<div class="conright">
+					<p>2019-05-06 16:26:13</p>
+					<p class="red">（超时需二次补缴）</p>
+				</div>
+			</li>
+		</ul>
+		<!--./border-->
+		<!--zkbtn-->
+		<div class="zkbtn"><button type="button">展开<i class="qrdicon trans"></i></button></div>
+		<!--./zkbtn-->
+		<!--invbtnd-->
+		<div class="invbtnd ">
+			<div class="invsuccess ">
+				<button type="button" class="btn-primary" id="btnRightPay">立即支付</button>	
+				<p class="invcon">支付成功后请于<span>15分钟</span>内出场<span></span></p>
+			</div>
+		</div>
+		<!--./invbtnd-->
+	</div>
+	<!--./cmcond-->
+</div>
+<!--./wrap-->
+<!--shadeclass-->
+<div class="shadeclass"></div>
+<!--./shadeclass-->
+
+<!--bigimgd-->
+<div class="bigimgd">
+	<img src="">
+</div>
+<!--./bigimgd-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+//点击图片
+$('.btnimg').click(function(){
+	let img = 'images/ceshi.png'
+	$('.bigimgd img').attr('src',img)
+	$('.shadeclass').fadeIn(200);
+	$('.bigimgd').fadeIn(200);
+})
+//点击遮罩层
+$('.shadeclass').click(function(){
+	$('.shadeclass').fadeOut(200);
+	$('.bigimgd').fadeOut(200);
+})
+//展开列
+$('.zkbtn button').click(function(){
+	var height =  $('.border').height();
+	if(height == 0){
+		$('.qrdicon').css('transform','rotate(180deg)')
+		$('.border').css('height','142px');
+		$(this).css('top','0px')
+	}else{
+		$('.qrdicon').css('transform','rotate(0deg)')
+		$('.border').css('height','0px');
+		$(this).css('top','-10px')
+	}
+})
+//点击立即支付
+$('#btnRightPay').click(function(){
+	window.location.href = 'pay.shtml';
+})
+</script>
+</body>
+</html>

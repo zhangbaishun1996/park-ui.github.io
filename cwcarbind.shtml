@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>智能泊车</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<style type="text/css">
+.parkd2 .titd{padding-bottom: 0px;}
+</style>
+</head>
+<body ontouchstart="">
+<!--wrap-->
+<div class="wrap">
+	<!--wraphead-->
+	<div class="headd mainpad">
+			<div class="headcond">
+				<div class="headtit">水湾1979商业停车场</div>
+				<button type="button" id="adrBtn">详细地址<i class="titicon trans"></i></button>
+			</div>
+			<div class="headadr ellipsis trans">广东省深圳市南山区水湾1979南山区水湾1979南山区水湾南山</div>
+	</div>
+	<!--./wraphead-->
+	<!--mainbg-->
+	<div class="mainbg"><img src="images/b_bg.png"></div>
+	<!--./mainbg-->
+	<!--main-->
+	<div class="main mainpad"> 
+	<!---->
+		<div class="choosebtn flexbeteen">
+			<button type="button" class="on" id='cplate'>按车牌号缴费</button>
+			<button type="button" class="" id="cstall">按车位号缴费</button>
+		</div>
+		<!--parkd2-->
+		<div class="parkd2">
+			<div class="titfont">请输入你的车牌号</div>
+			<div class="titd"><div class="iformtsd " id="iformtsID"></div></div>
+			<!--plateipd-->
+			<div class="plateipd" id="plateipDID" div-name="div"> 
+				<ul>
+					<li><a href="javascript:;">粤</a></li>
+					<li><a href="javascript:;">B</a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li id="neweDID" class="newe"><a href="javascript:;"><i>+</i><br>
+						新能源</a></li>
+				</ul>
+			</div>
+			<!--./plateipd--> 
+			<div class="cwinpd" style="display: none;" div-name="div">
+				<input type="text"placeholder="请输入车位号,例如:10001">
+			</div>
+		</div>
+		<!--./parkd2-->	
+		<div class="cbbtnd "><button type="button" class="btn-primary" onClick="onSubmit();">查询我的车辆</button>
+		<!--./cbbtnd--> 
+	</div>
+	<!--./main--> 
+	<!--空白标签-->
+	<div class="blank20"></div>
+	<!--historyd-->
+	<div class="historyd">
+		<div class="hplate">
+			<button type="button" class="carhistory">粤B56987</button>
+			<button type="button" class="carhistory">粤B56987D</button>
+			<button class="hdelete" type="button"></button>
+		</div>
+	</div>
+	<!--./historyd-->
+	<!--空白标签-->
+	<div class="blank30"></div>
+	<div class="explanatoryd">
+		<p>1.临牌、特殊车牌及识别有误的车辆，请到人工收费处缴费；</p>
+		<p>2.缴费后请在免费出场时间内离场，超时需补缴停车费。</p>
+	</div>
+</div>
+<!--./wrap-->
+<!--platekeyd-->
+<div class="platekeyd" style="display:none;">
+  <div class="linkd"><a class="closed" href="javascript:;">关闭</a></div>
+  <div class="keyd" id="plateProvDID">
+    <ul>
+      <li id="first"><a href="javascript:;">贵</a></li>
+      <li><a href="javascript:;">京</a></li>
+      <li><a href="javascript:;">沪</a></li>
+      <li><a href="javascript:;">粤</a></li>
+      <li><a href="javascript:;">津</a></li>
+      <li><a href="javascript:;">冀</a></li>
+      <li><a href="javascript:;">晋</a></li>
+      <li><a href="javascript:;">蒙</a></li>
+      <li><a href="javascript:;">辽</a></li>
+      <li><a href="javascript:;">吉</a></li>
+      <li><a href="javascript:;">黑</a></li>
+      <li><a href="javascript:;">苏</a></li>
+      <li><a href="javascript:;">浙</a></li>
+      <li><a href="javascript:;">皖</a></li>
+      <li><a href="javascript:;">闽</a></li>
+      <li><a href="javascript:;">赣</a></li>
+      <li><a href="javascript:;">鲁</a></li>
+      <li><a href="javascript:;">豫</a></li>
+      <li><a href="javascript:;">鄂</a></li>
+      <li><a href="javascript:;">湘</a></li>
+      <li><a href="javascript:;">桂</a></li>
+      <li><a href="javascript:;">琼</a></li>
+      <li><a href="javascript:;">渝</a></li>
+      <li><a href="javascript:;">川</a></li>
+      <li><a href="javascript:;">云</a></li>
+      <li><a href="javascript:;">藏</a></li>
+      <li><a href="javascript:;">陕</a></li>
+      <li><a href="javascript:;">甘</a></li>
+      <li><a href="javascript:;">青</a></li>
+      <li><a href="javascript:;">宁</a></li>
+      <li><a href="javascript:;">新</a></li>
+      <li><a href="javascript:;">港</a></li>
+      <li><a href="javascript:;">澳</a></li>
+      <li><a href="javascript:;">台</a></li>
+      <li id="shi"><a href="javascript:;">使</a></li>
+      <li><a href="javascript:;">无</a></li>
+    </ul>
+  </div>
+  <div class="keyd" id="plateRoutDID">
+    <ul id="plateNumDID">
+      <li><a href="javascript:;">0</a></li>
+      <li><a href="javascript:;">1</a></li>
+      <li><a href="javascript:;">2</a></li>
+      <li><a href="javascript:;">3</a></li>
+      <li><a href="javascript:;">4</a></li>
+      <li><a href="javascript:;">5</a></li>
+      <li><a href="javascript:;">6</a></li>
+      <li><a href="javascript:;">7</a></li>
+      <li><a href="javascript:;">8</a></li>
+      <li><a href="javascript:;">9</a></li>
+    </ul>
+    <ul>
+      <li><a href="javascript:;">A</a></li>
+      <li><a href="javascript:;">B</a></li>
+      <li><a href="javascript:;">C</a></li>
+      <li><a href="javascript:;">D</a></li>
+      <li><a href="javascript:;">E</a></li>
+      <li><a href="javascript:;">F</a></li>
+      <li><a href="javascript:;">G</a></li>
+      <li><a href="javascript:;">H</a></li>
+      <li><a href="javascript:;">J</a></li>
+      <li><a href="javascript:;">K</a></li>
+      <li><a href="javascript:;">L</a></li>
+      <li><a href="javascript:;">M</a></li>
+      <li><a href="javascript:;">N</a></li>
+      <li><a href="javascript:;">O</a></li>
+      <li><a href="javascript:;">P</a></li>
+      <li><a href="javascript:;">Q</a></li>
+      <li><a href="javascript:;">R</a></li>
+      <li><a href="javascript:;">S</a></li>
+      <li><a href="javascript:;">T</a></li>
+      <li><a href="javascript:;">U</a></li>
+      <li><a href="javascript:;">V</a></li>
+      <li><a href="javascript:;">W</a></li>
+      <li><a href="javascript:;">X</a></li>
+      <li><a href="javascript:;">Y</a></li>
+      <li><a href="javascript:;">Z</a></li>
+    </ul>
+    <ul class="mini" id="plateLastDID">
+      <li><a href="javascript:;">港</a></li>
+      <li><a href="javascript:;">澳</a></li>
+      <li><a href="javascript:;">学</a></li>
+      <!--<li><a href="javascript:;">领</a></li>-->
+      <li><a href="javascript:;">使</a></li>
+    </ul>
+  </div>
+  <div class="deld"><a href="javascript:;" onClick="delPalteKey();"></a></div>
+</div>
+<!--./platekeyd--> 
+
+<!--advd-->
+<div class="advd">
+	<div class="advcon">
+		<p class="p2">详情咨询：xxxxxxxx</p>
+	</div>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script src="js/plate_keyboard.js"></script> 
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="js/until.js"></script>
+<script type="text/javascript">
+//var appid="wxb9ca0e46a3858045";
+//详细地址
+$('#adrBtn').click(function(){
+	addressUnfold('.headadr','.titicon');
+})
+$('.choosebtn button').on('click',function(){
+	$(this).addClass('on').siblings().removeClass('on');
+	$("div[div-name='div']").hide().eq($(this).index()).show();
+	if($(this).index() == 1){
+		$('.titfont').text('请输入车位号缴费');
+		$('.hplate').hide();
+	}else{
+		$('.titfont').text('请输入你的车牌号');
+		$('.hplate').show();
+	}
+})
+//点击历史车牌
+$('.hplate .carhistory').on('click',function(){
+	$('#plateipDID ul li a').text('');
+	var thisTxt = $(this).text();
+	historyCarPlate(thisTxt);
+})
+//历史车牌删除
+$('.hdelete').click(function(){
+	setTitle = '';
+	setContents = '是否清除历史信息';
+	setButton = '["取消","确认"]';
+	$(this).openWindow(setTitle,setContents,setButton,isDel);
+})
+//确定删除
+function isDel(){
+	//包括cookie
+	delHistory('.hplate');	
+}
+ function onSubmit(){
+	 var typeBtn = $('.choosebtn button');
+	 var id;
+		$(typeBtn).each(function(){
+			if($(this).hasClass('on')){
+				id = ($(this).attr('id'));	
+			}
+		});
+		console.log(id)
+	 //判断id名  进行操作
+		if(id == 'cplate'){ //车牌
+			window.location.href = 'cwcarpament.shtml'
+		}
+		if(id == 'cstall'){//车位
+		window.location.href = 'cwcarpoor.shtml'
+			
+		}
+	 return;
+	 var plateNum=getPlateipDIDVal(); //获取车牌信息
+	 console.log(plateNum)
+	//window.location.href='carlist.shtml';
+	setTitle = '';
+	setContents = '未检测到该车辆入场，请核实您输入的车牌信息';
+	setButton = '["返回首页","重新输入"]';
+	$(this).openWindow(setTitle,setContents,setButton,resumeload);
+	return
+	try{
+		$.ajax({
+			url: "http://39.107.106.251:10004/user/licensePlate/save",
+			type: "POST",
+			async: false,
+			dataType: "jsonp",
+			contentType: "application/json",
+			data: {'licensePlate':plateNum,'token':''},
+			success: function(data){
+				var code = data.code;
+				if(code == 0){
+					alert("保存成功");
+					window.location.href='carlist.shtml';
+				}
+			}
+		});	
+	}catch(e){
+	}
+} 
+function resumeload(){
+	showPlateKeyboard(2)
+}
+</script>
+</body>
+</html>

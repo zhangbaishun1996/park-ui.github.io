@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>扫码入场</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<style type="text/css">
+	.invbtnd{padding-top: 50px;}
+</style>
+</head>
+<body ontouchstart="">
+<!--wrap-->
+<div class="wrap">
+	<div class="qflistd mainpad">提示：请确认你的停车信息无误，再确认入场</div>
+	<div class="blank10"></div>
+	<!--qrparkd-->
+	<div class="qrparkd">
+		<div class="parkimg"><img src="images/qr_in_bg.png"></div>
+		<div class="parkcon">
+			<p class="p1">研发测试区-停车网关</p>
+			<p class="p2">广东省深圳市南山区水湾1979南山区水湾1979南山区水湾南山区水湾</p>
+		</div>
+	</div>
+	<!--./qrparkd-->
+	<div class="blank10"></div>
+	<!--qrinfod-->
+	<div class="qrinfod mainpad">
+		<div class="flexbeteen border">
+			<span class="color">注册号</span>
+			<span>o_FzsvgyFJXG9rVall3BkNM2D_vs</span>
+		</div>
+		<div class="flexbeteen">
+			<span class="color">入场时间</span>
+			<span>2019-05-06 16:31:30</span>
+		</div>
+	</div>
+	<!--./qrinfod-->
+	<div class="carind">
+		车辆登记成功，请入场
+	</div>
+	<div class="invbtnd mainpad">
+			<button type="button" class="btn-primary">确认入场</button>	
+	</div>
+</div>
+<!--./wrap-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$('.btn-primary').click(function(){
+		$('.carind').fadeIn(0);
+		$('.invbtnd').fadeOut(0);
+	})
+</script>
+</body>
+</html>

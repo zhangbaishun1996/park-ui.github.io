@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>停车缴费</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+</head>
+<body ontouchstart="">
+<div class="wrap">
+	<!--regparkd-->
+	<div class="regparkd">
+		<div class="parktit">停车场信息</div>
+		<div class="flexbeteen regpading after">
+			<label>停车场名称</label>
+			<p>水湾1979商业停车场</p>
+		</div>
+		<div class="flexbeteen regpading">
+			<label>停车场地址</label>
+			<p>广东省深圳市南山区水湾1979南山区水湾南山区水湾</p>
+		</div>
+	</div>
+	<!--./regparkd-->
+	<div class="blank10"></div>
+	<!--formData-->
+	<form action="" method="" id="formData">
+	<div class="regparkd ">
+		<div class="parktit">信息查询</div>
+		<div class="flexbeteen regpading after">
+			<label>车位池名称</label>
+			<div class="inpd">
+				<div class="alertInfo infon"></div>
+				<input type="text" id="username" name="username" placeholder="请输入车位池名称">
+				<i class="wicon"></i>
+			</div>
+		</div>
+	</div>
+	<div class="invbtnd mainpad">
+			<button type="button" class="btn-primary">查询我的车位池</button>	
+	</div>
+	</form>
+	<!--./formData-->
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/until.js"></script>
+<script type="text/javascript">
+$(".btn-primary").click(function(){
+	let name = $('#username').val();
+		if(name.length == 0){
+			$('.infon').text('请输入您的车位号');
+			return false
+		}else{
+			$('.infon').text('');
+		}
+		window.location.href = 'cwcarportlist.shtml'
+	return
+	//提示弹窗 ajax失败之后
+	setTitle = '';
+	setContents = '您好，游客不能交易，请“开立真实账户”或“开立模拟账户”';
+	setButton = '["取消","联系客服"]';
+	$(this).openWindow(setTitle,setContents,setButton,add);
+})
+function add(){
+	console.log(1)
+}
+</script>
+</body>
+</html>

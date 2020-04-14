@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>物业费详情</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+</head>
+<body ontouchstart="">
+<!--wrap-->
+<div class="wrap">
+	<div class="qflistd mainpad">提示：请确认费用明细无误，再进行支付</div>
+	<div class="blank10"></div>
+	<!--wylistd-->
+	<div class="wylistd">
+		<div class="border icon1">
+			小区名称:&nbsp;<span>智慧物业（研发测试）</span>
+		</div>
+		<div class="border icon2">
+			楼栋房间:&nbsp;<span>9栋0408</span>
+		</div>
+		<div class="border icon3">
+			房间面积:&nbsp;<span>100平米</span>
+		</div>
+	</div>
+	<!--./wylistd-->
+	<div class="wytitd">费用明细</div>
+	<ul class="wyinfod">
+		<li>
+			<div class="flexbeteen infotit border pad">
+				<p class="p1"><span class="default"></span>2019年07月</p>
+				<p class="p2">￥<span>200.00</span></p>
+			</div>
+			<div class="pad">
+				<div class="flexbeteen infotit">
+					<span class="c1">电梯维修费</span>
+					<span>￥100.00</span>
+				</div>
+				<div class="flexbeteen infotit">
+					<span class="c1">电梯维修费</span>
+					<span>￥100.00</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="flexbeteen infotit border pad">
+				<p class="p1"><span class="default"></span>2019年07月</p>
+				<p class="p2">￥<span>200.00</span></p>
+			</div>
+			<div class="pad">
+				<div class="flexbeteen infotit">
+					<span class="c1">电梯维修费</span>
+					<span>￥100.00</span>
+				</div>
+				<div class="flexbeteen infotit">
+					<span class="c1">电梯维修费</span>
+					<span>￥100.00</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<!--./wrap-->
+<div class="wypamentd">
+	<div class="pamentcond">
+		<p class="p1"><span class="default"></span>全选</p>
+		<p class="p2">总金额：<span class="clr">￥</span><span class="clrtxt">0.00</span></p>
+		<p class="p3"><button type="button" class="btn-primary">立即支付</button></p>
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/until.js" ></script>
+<script type="text/javascript">
+//点击物业明细选择按钮
+$('.wyinfod .p1').on('click',function(){
+	if($(this).find('span').hasClass('default')){
+		$(this).find('span').attr('class','iselect');
+	}else{
+		$(this).find('span').attr('class','default');	
+	}
+	check_num();
+});
+//点击全选
+$('.pamentcond .p1').click(function(){
+	if($(this).find('span').hasClass('default')){
+		$(this).find('span').attr('class','iselect');
+		$('.wyinfod .p1 span').attr('class','iselect')
+	}else{
+		$(this).find('span').attr('class','default');
+		$('.wyinfod .p1 span').attr('class','default')
+	}
+	check_num();
+});
+// 计算
+check_num();
+function check_num() {
+	var num = 0;
+	var ischeckall =  $.makeArray($('.wyinfod').find('.p1 span')).every(function(item){
+		return item.className == 'iselect'? true:false
+	})
+	$('.wyinfod .p1 span').each(function() {
+		if ($(this).hasClass('iselect')) {
+		 num = (parseFloat(num) + parseFloat($(this).parent().next().children().text()*100))
+		}
+	})
+	 $('.pamentcond .clrtxt').html((num/100).toFixed(2));
+	 isCheckall(ischeckall)
+};
+//判断是否全选
+function isCheckall(ischeckall){
+	console.log(ischeckall)
+	if(ischeckall){
+		$('.pamentcond .p1 span').attr('class', 'iselect')
+	}else{
+		$('.pamentcond .p1 span').attr('class', 'default')
+	}
+}
+$('.btn-primary').click(function(){
+	var price = $('.clrtxt').text();
+	if(price == '0.00'){
+		setTitle = '';
+		setContents = '请在勾选缴费明细';
+		setButton = '["确定"]';
+		$(this).openWindow(setTitle,setContents,setButton);
+		return 
+	}else{
+		console.log(2)
+	}
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>停车缴费</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<style type="text/css"> 
+.carinfotopd .infotit .p1{text-align: center;}
+.carinfotopd .infotit .p1,.carinfotopd .infotit .p1 button {font-size: 14px;}	
+@media screen and (min-width: 320px) and (max-width: 360px){
+	/*carbind.shtml --> explanatoryd */
+	.carinfotopd .infotit .p1,.carinfotopd .infotit .p1 button {font-size: 12px;}	
+}
+</style>
+</head>
+<body ontouchstart="">
+<div class="wrap">
+	<!--carinfotopd-->
+	<div class="carinfotopd">
+		<div class="infotit flexcenter">
+			<p class="p1">提示：若你的车辆还未登记为月票车，请先到<button type="button" id="regBtn">管理处登记</button></p>
+		</div>
+	</div>
+	<!--./carinfotopd-->
+	<!--regparkd-->
+	<div class="regparkd">
+		<div class="parktit">停车场信息</div>
+		<div class="flexbeteen regpading after">
+			<label>停车场名称</label>
+			<p>水湾1979商业停车场</p>
+		</div>
+		<div class="flexbeteen regpading">
+			<label>停车场地址</label>
+			<p>广东省深圳市南山区水湾1979南山区水湾南山区水湾</p>
+		</div>
+	</div>
+	<!--./regparkd-->
+	<div class="blank10"></div>
+	<!--formData-->
+	<form action="" method="" id="formData">
+	<div class="regparkd ">
+		<div class="parktit">车辆信息</div>
+		<div class="flexbeteen regpading after">
+			<label>注册号</label>
+			<div class="inpd">
+				<div class="alertInfo infon"></div>
+				<input type="text" id="username" class="inpwidth" name="username" placeholder="请输入您的姓名" value="o_FzsvgyFJXG9rVall3BkNM2D_vs">
+			</div>
+		</div>
+		<div class="flexbeteen regpading after">
+			<label>手机号码</label>
+			<div class="inpd">
+				<div class="alertInfo infop"></div>
+				<input type="text" id="userphone" name="userphone" placeholder="请输入您的手机号码">
+				<i class="wicon"></i>
+<!-- 				<div class="xxx">000</div> -->
+			</div>
+		</div>
+		<div class="flexbeteen regpading">
+			<label>车牌号码</label>
+			<div class="inpd">
+				<div class="alertInfo leftw infoc"></div>
+				<span class="after">粤</span>
+				<input type="text" id="usercar" name="usercar" placeholder="请输入车牌">
+				<i class="wicon"></i>
+			</div>
+		</div>
+	</div>
+	<div class="invbtnd mainpad">
+			<button type="button" class="btn-primary">查询我的车辆</button>	
+	</div>
+	</form>
+	<!--./formData-->
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/until.js"></script>
+<script type="text/javascript">
+	//点击注册月票车
+	$('#regBtn').click(function(){
+		window.location.href = 'mtcarreg.shtml';
+	})
+$(".btn-primary").click(function(){
+	let name = $('#username').val(),
+		phone = $('#userphone').val(),
+		usercar = $('#usercar').val();
+		if(name.length == 0){
+			$('.infon').text('请输入您的姓名');
+			return false
+		}else{
+			$('.infon').text('');
+		}
+		if(phone.length == 0){
+			$('.infop').text('请输入您的手机号码');
+			return false
+		}else{
+			$('.infop').text('');
+		}
+		if(usercar.length == 0){
+			$('.infoc').text('请输入您的车牌号');
+			return false
+		}else{
+			$('.infoc').text('');
+		}
+		
+	//提示弹窗 ajax失败之后
+	setTitle = '';
+	setContents = '该车牌已被注册，请核对您输入的车牌信息';
+	setButton = '["取消","联系客服"]';
+	$(this).openWindow(setTitle,setContents,setButton,add);
+})
+function add(){
+	console.log(1)
+}
+</script>
+</body>
+</html>

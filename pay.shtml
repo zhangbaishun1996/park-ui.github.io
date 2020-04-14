@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>我的停车信息</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+</head>
+<body ontouchstart="">
+<!--wrap-->
+<div class="wrap">
+	<!--invd-->
+	<div class="invd mainpad">
+		<div class="invbtn "><button type="button" class=""><i class="invicon"></i>开发票</button></div>
+	</div>
+	<!--./invd-->
+	<!--invbgd-->
+	<div class="invbgd flexcenter">
+		<img src="images/p_pay_success.png" id="paymentBg">
+		<p id="paymentText">支付成功</p>
+		<p class="inavm"><span>￥</span>421.00</p>
+		<p class="inavtime" >支付倒计时：05:50</p>
+	</div>
+	<!--./invbgd-->
+	<!--invbtnd-->
+	<div class="invbtnd mainpad">
+		<div class="invsuccess ">
+			<button type="button" class="btn-primary">完成</button>	
+			<p class="invcon">请于<span>15分钟</span>内离开<span>水湾1979商业停车场</span></p>
+		</div>
+		<div class="invfuilure dlpynone">
+			<button type="button" class="b1">返回首页</button>
+			<button type="button" class="b2 btn-primary">重新支付</button>
+		</div>
+	</div>
+	<!--./invbtnd-->
+</div>
+<!--./wrap-->
+<!--advd-->
+<div class="advd">
+	<div class="advcon">
+		<p class="p2">详情咨询：xxxxxxxx</p>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	
+paymentState()	
+function paymentState(){
+	let state = 2 // 支付状态判断
+	if(state == 0){
+		$('.invfuilure').fadeIn();
+		$('.invsuccess').fadeOut();
+		$('.inavtime').fadeOut();
+		$('#paymentText').text('支付失败');
+		$('#paymentBg').attr('src','images/p_pay_fuilure.png');
+		return
+	}
+	if(state == 1){
+		$('.invfuilure').fadeOut();
+		$('.invsuccess').fadeIn();
+		$('.inavtime').fadeIn();
+		$('#paymentText').text('待支付');
+		$('.invsuccess button').text('支付');
+		$('.invcon').fadeOut()
+		$('#paymentBg').attr('src','images/p_pay_unpaid.png');
+		return
+	}
+	$('.invfuilure').fadeOut();
+	$('.invsuccess').fadeIn();
+	$('.inavtime').fadeOut();
+	$('#paymentText').text('支付成功');
+	$('#paymentBg').attr('src','images/p_pay_success.png');
+}
+
+</script>
+</body>
+</html>

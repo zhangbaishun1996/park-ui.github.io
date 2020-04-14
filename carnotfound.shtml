@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>我的停车信息</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+</head>
+<body ontouchstart="">
+<!--wrap-->
+<div class="wrap">
+	<!--./carinfod-->
+	<div class="carinfotopd">
+		<div class="infotit flexcenter">
+			<p class="p1"><span>粤BA0000</span><button type="button" id="modificationId">点击修改</button></p>
+			<p class="p2">未找到你的车辆信息，请选择以下近似车牌</p>
+		</div>
+	</div>
+	<!--./carinfod-->
+	<div class="blank60"></div>
+	<!--./carinfolistd-->
+	<div class="carinfolistd">
+		<!-- <div class="nodata">暂无数据</div> -->
+		<ul>
+			<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+				<li>
+				<a href="carpament.shtml">
+						<div class="listimg"><img src="images/ceshi.png"></div>
+						<div class="infocon">
+						<p class="p1">粤BD0107</p>
+						<p><span class="ticon1">入场时间：</span>2019-04-24 18:27:55</p>
+						<p><span class="ticon2">停车时长：</span>1天15小时14分钟</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!--carinfolistd-->
+</div>
+<!--./wrap-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$('#modificationId').click(function(){
+		window.location.href = 'carbind.shtml'
+	});
+</script>
+</body>
+</html>

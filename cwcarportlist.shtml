@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>停车缴费</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+</head>
+<body ontouchstart="">
+<div class="wrap">
+	<!--carportitd-->
+	<div class="carportitd mainpad">
+		<p class="p1">车位池名称：<span>共享测试车位池</span></p>
+		<p class="p2">请选择需要延期的车位：</p>
+	</div>
+	<!--./carportitd-->
+	<!--carportcond-->
+	<div class="carportcond mainpad">
+		<!-- <div class="nodata">暂无数据</div> -->
+		<ul class="conlist">
+			<li>
+				<a href="cwcarrecharge.shtml">
+					<div class="listtp flexbeteen">
+						<p class="p1">车位号：</p>
+						<p class="p2">1000002</p>
+					</div>
+					<div class="listbt flexbeteen">
+						<p class="p3">有效期为：</p>
+						<p>2019-03-29 至 2019-04-28</p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="listtp flexbeteen">
+						<p class="p1">车位号：</p>
+						<p class="p2">1000002</p>
+					</div>
+					<div class="listbt flexbeteen">
+						<p class="p3">有效期为：</p>
+						<p>2019-03-29 至 2019-04-28</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!--./carportcond-->
+</div>
+	
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>

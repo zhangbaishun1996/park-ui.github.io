@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>停车缴费</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+</head>
+<body ontouchstart="">
+<div class="wrap">
+	<div class="blank10"></div>
+	<!--rechd-->
+	<div class="rechd">
+		<div class="rechimg"><img src="images/mt_carpark_bg.png" ></div>
+		<div class="rechcond">
+			<p class="p1">水湾1979商业停车场</p>
+			<p class="p2">广东省深圳市南山区水湾1979南山区水湾1979南山区水湾南山区水湾</p>
+		</div>
+	</div>
+	<!--./rechd-->
+	<div class="blank10"></div>
+	<!--rechmod-->
+	<div class="rechmod">
+		<!--rechmocond-->
+		<div class="rechmocond">
+			<p class="tit">选择充值数额：</p>
+			<div class="monthc">
+				<button type="button" class="on">6个月</button>
+				<button type="button">3个月</button>
+				<button type="button">2个月</button>
+				<button type="button">1个月</button>
+			</div>
+		</div>
+		<!--./-->
+		<!--rechmolist-->
+		<div class="rechmolist">
+			<div class="flexbeteen regpading regborder">
+				<span>车牌号码：</span>
+				<p class="pw">粤BY7835</p>
+			</div>
+			<div class="flexbeteen regpading regborder">
+				<span>原有效期：</span>
+				<p>2019-03-01 至 2019-04-17</p>
+			</div>
+			<div class="flexbeteen regpading regborder">
+				<span>新有效期：</span>
+				<p>2019-03-01 至 2019-04-17</p>
+			</div>
+			<div class="flexbeteen regpading">
+				<span>充值金额：</span>
+				<p class="pw">0元</p>
+			</div>
+		</div>
+		<!--./rechmolist-->
+	</div>
+	<!--./rechmod-->
+	<!--invbtnd-->
+	<div class="invbtnd mainpad">
+			<button type="button" class="btn-primary">立即支付</button>	
+	</div>
+	<!--./invbtnd-->
+</div>
+	
+<script src="js/jquery.min.js"></script>
+<script src="js/until.js"></script>
+<script type="text/javascript">
+$(function(){
+	chooseMonth('.monthc button')
+})
+$('.btn-primary').click(function(){
+	var month = chooseMonth('.monthc button')
+	 console.log(month)
+	  window.location.href = 'pay.shtml';
+})	
+</script>
+</body>
+</html>

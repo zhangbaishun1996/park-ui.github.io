@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>我的停车信息</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<style type="text/css">
+	.qrd{padding: 100px;}
+</style>
+</head>
+<body ontouchstart="">
+<div class="wrap">
+	<div class="qftitd">
+		请选择绑定的车辆
+	</div>
+	<div class="qfcard">
+		<button type="button">粤B6Z779</button>
+		<button type="button">粤B6Z779</button>
+		<button type="button">粤B6Z779</button>
+		<button type="button">粤B6Z779</button>
+		<button type="button">粤B6Z779</button>
+	</div>
+<!--qrd-->
+	<div class="qrd">
+		<button type="button" id="qrInPark">点击输入车牌号码 <i class="qrdicon"></i></button>
+	</div>
+	<!--./qrd-->
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$('#qrInPark').click(function(){
+		window.location.href = 'qfcarbind.shtml';
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>智能泊车</title>
+<link rel="stylesheet" type="text/css" href="css/public12.css"/>
+<style type="text/css">
+	.mainpad{margin: 0 3%;}
+	.cbbtnd{padding-top: 30px;} 
+	.titcon{padding: 20px 0;}
+	
+</style>
+</head>
+<body ontouchstart="">
+<!--wrap-->
+<div class="wrap">
+	<!--main-->
+	<div class="main mainpad"> 
+		<!--parkd2-->
+		<div class="parkd2">
+			<div class="titd">
+			<div class="titcon flexbeteen">
+				<span>请输入你的车牌号</span>
+			</div>
+				<div class="iformtsd " id="iformtsID"></div>
+			</div>
+			<div class="plateipd" id="plateipDID">
+				<ul>
+					<li><a href="javascript:;">粤</a></li>
+					<li><a href="javascript:;">B</a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li id="neweDID" class="newe"><a href="javascript:;"><i>+</i><br>
+						新能源</a></li>
+				</ul>
+			</div>
+			<!--./plateipd--> 
+		</div>
+		<!--./parkd2-->	
+		<div class="cbbtnd "><button type="button" class="btn-primary def" disabled="disabled" onClick="onSubmit();" id="cxwdcl">查询我的车辆</button>
+		<!--./cbbtnd--> 
+	</div>
+	<!--./main--> 
+</div>
+<!--./wrap-->
+
+<!--platekeyd-->
+<div class="platekeyd" style="display:none;">
+  <div class="linkd"><a class="closed" href="javascript:;">关闭</a></div>
+  <div class="keyd" id="plateProvDID">
+    <ul>
+      <li id="first"><a href="javascript:;">贵</a></li>
+      <li><a href="javascript:;">京</a></li>
+      <li><a href="javascript:;">沪</a></li>
+      <li><a href="javascript:;">粤</a></li>
+      <li><a href="javascript:;">津</a></li>
+      <li><a href="javascript:;">冀</a></li>
+      <li><a href="javascript:;">晋</a></li>
+      <li><a href="javascript:;">蒙</a></li>
+      <li><a href="javascript:;">辽</a></li>
+      <li><a href="javascript:;">吉</a></li>
+      <li><a href="javascript:;">黑</a></li>
+      <li><a href="javascript:;">苏</a></li>
+      <li><a href="javascript:;">浙</a></li>
+      <li><a href="javascript:;">皖</a></li>
+      <li><a href="javascript:;">闽</a></li>
+      <li><a href="javascript:;">赣</a></li>
+      <li><a href="javascript:;">鲁</a></li>
+      <li><a href="javascript:;">豫</a></li>
+      <li><a href="javascript:;">鄂</a></li>
+      <li><a href="javascript:;">湘</a></li>
+      <li><a href="javascript:;">桂</a></li>
+      <li><a href="javascript:;">琼</a></li>
+      <li><a href="javascript:;">渝</a></li>
+      <li><a href="javascript:;">川</a></li>
+      <li><a href="javascript:;">云</a></li>
+      <li><a href="javascript:;">藏</a></li>
+      <li><a href="javascript:;">陕</a></li>
+      <li><a href="javascript:;">甘</a></li>
+      <li><a href="javascript:;">青</a></li>
+      <li><a href="javascript:;">宁</a></li>
+      <li><a href="javascript:;">新</a></li>
+      <li><a href="javascript:;">港</a></li>
+      <li><a href="javascript:;">澳</a></li>
+      <li><a href="javascript:;">台</a></li>
+      <li id="shi"><a href="javascript:;">使</a></li>
+      <li><a href="javascript:;">无</a></li>
+    </ul>
+  </div>
+  <div class="keyd" id="plateRoutDID">
+    <ul id="plateNumDID">
+      <li><a href="javascript:;">0</a></li>
+      <li><a href="javascript:;">1</a></li>
+      <li><a href="javascript:;">2</a></li>
+      <li><a href="javascript:;">3</a></li>
+      <li><a href="javascript:;">4</a></li>
+      <li><a href="javascript:;">5</a></li>
+      <li><a href="javascript:;">6</a></li>
+      <li><a href="javascript:;">7</a></li>
+      <li><a href="javascript:;">8</a></li>
+      <li><a href="javascript:;">9</a></li>
+    </ul>
+    <ul>
+      <li><a href="javascript:;">A</a></li>
+      <li><a href="javascript:;">B</a></li>
+      <li><a href="javascript:;">C</a></li>
+      <li><a href="javascript:;">D</a></li>
+      <li><a href="javascript:;">E</a></li>
+      <li><a href="javascript:;">F</a></li>
+      <li><a href="javascript:;">G</a></li>
+      <li><a href="javascript:;">H</a></li>
+      <li><a href="javascript:;">J</a></li>
+      <li><a href="javascript:;">K</a></li>
+      <li><a href="javascript:;">L</a></li>
+      <li><a href="javascript:;">M</a></li>
+      <li><a href="javascript:;">N</a></li>
+      <li><a href="javascript:;">O</a></li>
+      <li><a href="javascript:;">P</a></li>
+      <li><a href="javascript:;">Q</a></li>
+      <li><a href="javascript:;">R</a></li>
+      <li><a href="javascript:;">S</a></li>
+      <li><a href="javascript:;">T</a></li>
+      <li><a href="javascript:;">U</a></li>
+      <li><a href="javascript:;">V</a></li>
+      <li><a href="javascript:;">W</a></li>
+      <li><a href="javascript:;">X</a></li>
+      <li><a href="javascript:;">Y</a></li>
+      <li><a href="javascript:;">Z</a></li>
+    </ul>
+    <ul class="mini" id="plateLastDID">
+      <li><a href="javascript:;">港</a></li>
+      <li><a href="javascript:;">澳</a></li>
+      <li><a href="javascript:;">学</a></li>
+      <!--<li><a href="javascript:;">领</a></li>-->
+      <li><a href="javascript:;">使</a></li>
+    </ul>
+  </div>
+  <div class="deld"><a href="javascript:;" onClick="delPalteKey();"></a></div>
+</div>
+<!--./platekeyd--> 
+
+<script src="js/jquery.min.js"></script> 
+<script src="js/plate_keyboard1.js"></script> 
+<script type="text/javascript">
+
+//绑定车牌
+ function onSubmit(){
+	var plateNum=getPlateipDIDVal(); //车牌号
+	console.log(plateNum)
+	
+} 
+</script>
+</body>
+</html>
