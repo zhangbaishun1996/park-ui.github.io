@@ -15,7 +15,9 @@
 	<!--wraphead-->
 	<div class="headd mainpad">
 			<div class="headcond">
-				<div class="headtit">水湾1979商业停车场</div>
+				<div class="headtit">
+					水湾1979商业停车场商业停车场
+				</div>
 				<button type="button" id="adrBtn">详细地址<i class="titicon trans"></i></button>
 			</div>
 			<div class="headadr ellipsis trans">广东省深圳市南山区水湾1979南山区水湾1979南山区水湾南山</div>
@@ -29,14 +31,14 @@
 		<!--parkd2-->
 		<div class="parkd2">
 			<div class="titd">
-				<div class="titcon flexbeteen">
-					<span>请输入你的车牌号</span>
-					<!--qrd-->
-					<div class="qrd">
-						<button type="button" id="bdCarID">临停车缴费 <i class="qrdicon"></i></button>
-					</div>
-					<!--./qrd-->
+			<div class="titcon flexbeteen">
+				<span>请输入你的车牌号</span>
+				<!--qrd-->
+				<div class="qrd">
+					<button type="button" id="mtCarID">月票车缴费 <i class="qrdicon"></i></button>
 				</div>
+				<!--./qrd-->
+			</div>
 				<div class="iformtsd " id="iformtsID"></div>
 			</div>
 			<div class="plateipd" id="plateipDID">
@@ -55,7 +57,7 @@
 			<!--./plateipd--> 
 		</div>
 		<!--./parkd2-->	
-		<div class="cbbtnd "><button type="button" class="btn-primary" onClick="onSubmit();">查询我的车辆</a></button>
+		<div class="cbbtnd "><button type="button" class="btn-primary" onClick="onSubmit();">查询我的车辆</button>
 		<!--./cbbtnd--> 
 	</div>
 	<!--./main--> 
@@ -66,29 +68,31 @@
 		<div class="hplate">
 			<button type="button" class="carhistory">粤B56987</button>
 			<button type="button" class="carhistory">粤B56987D</button>
-			<button class="hdelete" type="button"></button>
+			<button class="hdelete" type="button" ></button>
 		</div>
-	<!--qrd-->
-	<div class="qrd">
-		<button type="button" id="commuterCar">申请成为月票车 <i class="qrdicon"></i></button>
-	</div>
-	<!--./qrd-->
+		<!--qrd-->
+		<div class="qrd">
+			<button type="button" id="qrInPark">扫码进场车辆缴费 <i class="qrdicon"></i></button>
+		</div>
+		<!--./qrd-->
 	</div>
 	<!--./historyd-->
 	<!--空白标签-->
 	<div class="blank30"></div>
-	<div class="blank30"></div>
 	<div class="explanatoryd">
-		<p>1.仅适用于已登记的固定车辆。</p>
+		<p>1.临牌、特殊车牌及识别有误的车辆，请到人工收费处缴费；</p>
+		<p>2.缴费后请在免费出场时间内离场，超时需补缴停车费。</p>
+		<p class="dlpynone">1.仅适用于已登记的固定车辆。</p>
 	</div>
 </div>
 <!--./wrap-->
+
 <!--platekeyd-->
 <div class="platekeyd" style="display:none;">
   <div class="linkd"><a class="closed" href="javascript:;">关闭</a></div>
   <div class="keyd" id="plateProvDID">
     <ul>
-      <li id="first"><a href="javascript:;">贵</a></li>
+      <li><a href="javascript:;">贵</a></li>
       <li><a href="javascript:;">京</a></li>
       <li><a href="javascript:;">沪</a></li>
       <li><a href="javascript:;">粤</a></li>
@@ -177,6 +181,7 @@
   <div class="deld"><a href="javascript:;" onClick="delPalteKey();"></a></div>
 </div>
 <!--./platekeyd--> 
+
 <!--advd-->
 <div class="advd">
 	<div class="advcon">
@@ -188,22 +193,24 @@
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="js/until.js"></script>
 <script type="text/javascript">
+	$.ajax({
+		url:"http://www.vzicar.com",
+		success:function(data){
+			console.log(data)
+		}
+	})
 //var appid="wxb9ca0e46a3858045";
-
-
 //详细地址
 $('#adrBtn').click(function(){
 	addressUnfold('.headadr','.titicon');
 })
-//
 //跳转月票车
-$('#bdCarID').click(function(){
-	window.location.href='index.html';
+$('#mtCarID').click(function(){
+	window.location.href='mtcarbind.shtml';
 })
-
-//申请成为月票车
-$('#commuterCar').click(function(){
-	window.location.href='mtcarticket.shtml';
+//扫码入场缴费
+$('#qrInPark').click(function(){
+	window.location.href='qrout.shtml';
 })
 //点击历史车牌
 $('.hplate .carhistory').on('click',function(){
@@ -223,17 +230,21 @@ function isDel(){
 	//包括cookie
 	delHistory('.hplate');	
 }
-
-//提交
+//绑定车牌
  function onSubmit(){
-	window.location.href='carnotfound.shtml';
-		return
-	var plateNum=getPlateipDIDVal();
+	 //未查询到车牌跳转
+	/* window.location.href='carnotfound.shtml';
+	 
+	  return; */
+	//window.location.href='carlist.shtml';
+	var plateNum=getPlateipDIDVal(); //车牌号
 	console.log(plateNum)
-	setTitle = '';
+	//return;
+	setTitle = '000';
 	setContents = '未检测到该车辆入场，请核实您输入的车牌信息';
 	setButton = '["返回首页","重新输入"]';
 	$(this).openWindow(setTitle,setContents,setButton,resumeload);
+	return
 	try{
 		$.ajax({
 			url: "http://39.107.106.251:10004/user/licensePlate/save",

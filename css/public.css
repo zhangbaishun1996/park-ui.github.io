@@ -74,7 +74,7 @@ img{display: block;border: none;}
 .historyd .hplate button{padding:0 5px;border-radius: 15px;margin-right: 5px;margin-bottom: 5px;font-size: 12px;text-align: center;color: #999;background: #fff;}
 .historyd button.hdelete{min-width: 26px;width: 26px;border-radius: 15px;background:url(../images/b_del_icon.png) center no-repeat;background-size:auto 14px;background-color: #fff;}
 .qrd{display: flex;justify-content: center;}
-.qrd button{ width: 141px;min-width: 141px;border-radius:10px;background-color: rgba(0,0,0,0);color: #5485FE;font-size: 14px;}
+.qrd button{ width: 150px;min-width: 150px;border-radius:10px;background-color: rgba(0,0,0,0);color: #5485FE;font-size: 14px;}
 .qrd .qrdicon{display: inline-block;width: 10px;height: 10px;margin-left: 5px;background:url(../images/b_right_icon.png) right no-repeat;background-size:auto 9px;}
 /* explanatoryd */
 .explanatoryd p{font-size: 12px;color: #999;padding-bottom:5px ;}
